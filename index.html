@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Technology</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <style>
+    *{
+    margin: 0; padding: 0; box-sizing: border-box;
+}
+body{
+    background-color: darkolivegreen;
+}
+section{
+    width: 100%; height: 100vh; margin-top: 300px; padding: 20px 30px;
+}
+  </style>
+  <body>
+    <section align ="center">
+<input type="number" placeholder=" input the score.value" id="input">
+      <button onclick="checkScore()">Check</button>
+      <div id="showResult">Result will show here.</div>
+    </section>
+    <script>
+            var song = new Audio('/audio/clap.wav');
+            var one = new Audio('/audio/defend.mp3')
+            var two = new Audio('/audio/No Evidence.mp3')
+            var three = new Audio('/audio/pity.mp3')
+            var four = new Audio('/audio/play.mp3')
+            var five = new Audio('/audio/shout.mp3')
+
+            function checkScore() {
+              // console.log(resultShow.innerHTML);
+              // console.log(score.value);               
+            }
+            
+            function checkScore() {
+              
+              var score = document.getElementById('input').value
+              if (score >= 0 && score <= 39){ 
+              console.log('F- Fail'); 
+              showResult.innerHTML = 'F9-fail' 
+              // song.play 
+            }  else if(score >= 40 && score <= 45 ) {
+              showResult.innerHTML = 'Bad' 
+              console.log ( "E");}
+            }
+
+              // else if (score.value>= 50 && score.value >= 55) {
+              //  showResult.innerHTML ='Pass'
+              //  one.play
+              //   console.log("D")
+              // }
+    </script>
+  </body>
+</html>
